@@ -13,6 +13,37 @@ game:GetService("RunService").RenderStepped:Connect(function(dt)
     c.Anchored = false
 end)
 
+local c = game.Players.LocalPlayer.Character:FindFirstChild("fff_fox").Handle
+c.AccessoryWeld:Destroy()
+c.Anchored = false
+local cRot = 0.1
+game:GetService("RunService").RenderStepped:Connect(function(dt)
+    cRot = cRot + 100*dt
+    c.Anchored = true
+    c.CFrame = game.Players.LocalPlayer.Character:FindFirstChild("Head").CFrame * CFrame.new(17.5112, 2.97596, 45.1119) * CFrame.Angles(math.rad(0), 0, -cRot)
+    c.Velocity = Vector3.new(0,0,0)
+    c.Anchored = false
+    c.Position = char.Torso.Position
+    local HighlightFlingBlock = true
+    c.HighlightFlingBlock = true
+end)
+
+local c = game.Players.LocalPlayer.Character:FindFirstChild("RockAccessory").Handle
+c.AccessoryWeld:Destroy()
+c.Anchored = false
+local cRot = 0.1
+game:GetService("RunService").RenderStepped:Connect(function(dt)
+    cRot = cRot + 100*dt
+    c.Anchored = true
+    c.CFrame = game.Players.LocalPlayer.Character:FindFirstChild("Head").CFrame * CFrame.new(17.5112, 2.97596, 45.1119) * CFrame.Angles(math.rad(0), 0, -cRot)
+    c.Velocity = Vector3.new(0,0,0)
+    c.Anchored = false
+    c.Position = char.Torso.Position
+    local HighlightFlingBlock = true
+    c.HighlightFlingBlock = true
+end)
+
+
 local c = game.Players.LocalPlayer.Character["MeshPartAccessory"].Handle
 c.AccessoryWeld:Destroy()
 c.Anchored = false
